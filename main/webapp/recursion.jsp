@@ -76,7 +76,7 @@ public int fibonacci(int n)
 		int n__ = n - 2;
 		int cntr = 1;
 	
-		if(n<=1)
+		if(n <= 1)
 		{
 		    return n;
 		}
@@ -107,8 +107,8 @@ public int fibonacci(int n)
      *      
      * THIS CLASS IS PROVIDED FOR YOU. YOU SHOULD NOT CHANGE IT!
      * 
-     * @author Stephen
-     * @version 2018-04-23
+     * @author Peyton
+     * @version 2018-11-3
      */
 protected final class Tree
 {
@@ -117,25 +117,26 @@ protected final class Tree
     
     public Tree(int value)
     {
-	//TODO
+      for(int x = 0; x < value; ++x)
+      {
+          children.add(new Tree(0));
+      }
+	  
     }
     
     public int getValue()
     {
-	//TODO
-	return -1;
+	return value;
     }
     
     public ArrayList<Tree> getChildren()
     {
-	//TODO
-	return new ArrayList<Tree>();
-	
+	return children;	
     }
     
     public void add(Tree child)
     {
-	//TODO
+		children.add(child);
     }
 
 }
