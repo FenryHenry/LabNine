@@ -44,12 +44,13 @@ public int factorial(int value)
        * By doing this, we break up the equation n! into n! = n * (n-1)!.
        */
 
-		if(value != basecase * (basecase - 1))
+		if(value == basecase)
 		{
-		    --value;
+		    return value;
 		}
       
-      return value;
+		--value;
+        return factorial(value);
 
 }
 
@@ -71,9 +72,20 @@ public int factorial(int value)
      */
 public int fibonacci(int n)
 {
-
-
-	//TODO
+		int n_ = n - 1;
+		int n__ = n - 2;
+		int cntr = 1;
+	
+		if(n<=1)
+		{
+		    return n;
+		}
+		else
+		{
+		    return fibonacci(n-1) + fibonacci(n-2);
+		}		
+}
+		
 
 
     
@@ -111,17 +123,21 @@ protected final class Tree
     public int getValue()
     {
 	//TODO
+	return -1;
     }
     
     public ArrayList<Tree> getChildren()
     {
 	//TODO
+	return new ArrayList<Tree>();
+	
     }
     
     public void add(Tree child)
     {
 	//TODO
     }
+
 }
     
     /**
@@ -150,8 +166,10 @@ public int nnaryTreeSize(int branchingFactor, int height)
     if (height == 1) 
     {
 	//TODO
+	return -1;
     }
 	//TODO
+	return -1;
 }
 
     /**
@@ -165,6 +183,7 @@ public int nnaryTreeSize(int branchingFactor, int height)
 public int treeSum(Tree tree)
 {
 	//TODO
+	return -1;
 }
     
     /**
