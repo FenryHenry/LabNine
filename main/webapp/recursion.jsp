@@ -120,8 +120,7 @@ protected final class Tree
       for(int x = 0; x < value; ++x)
       {
           children.add(new Tree(0));
-      }
-	  
+      }	  
     }
     
     public int getValue()
@@ -165,12 +164,14 @@ protected final class Tree
 public int nnaryTreeSize(int branchingFactor, int height)
 {
     if (height == 1) 
-    {
-	//TODO
-	return -1;
+    {		
+	return branchingFactor - (branchingFactor - 1);
     }
-	//TODO
-	return -1;
+    else
+    {
+    --height;    
+	return nnaryTreeSize(branchingFactor*branchingFactor, height);
+    }
 }
 
     /**
